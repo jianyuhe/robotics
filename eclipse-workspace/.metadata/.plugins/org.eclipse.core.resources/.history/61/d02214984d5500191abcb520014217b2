@@ -59,20 +59,20 @@ public class assigment2 {
 		
 		rotate(90);
 		
-		motorA.setSpeed(400);
-		motorB.setSpeed(400);
-		Delay.msDelay(1000);
+		motorA.setSpeed(200);
+		motorB.setSpeed(200);
+		Delay.msDelay(2000);
 		
 		rotate(-90);
 		
-		motorA.setSpeed(400);
-		motorB.setSpeed(400);
-		Delay.msDelay(2200);
+		motorA.setSpeed(200);
+		motorB.setSpeed(200);
+		Delay.msDelay(5000);
 		
 		rotate(-90);
-		motorA.setSpeed(400);
-		motorB.setSpeed(400);
-		Delay.msDelay(1000);
+		motorA.setSpeed(200);
+		motorB.setSpeed(200);
+		Delay.msDelay(2000);
 		
 		rotate(90);
 		
@@ -116,34 +116,16 @@ public class assigment2 {
 		        motorB.stop(true);
 		        servoMotor.rotate(160);
 			
-		        motorA.backward();
-			    motorB.backward();
-			    motorA.setSpeed(500);
-			       motorB.setSpeed(500);
-			       Delay.msDelay(2000); 
-			       
 		        motorA.forward();
 			    motorB.forward();
 			motorA.setSpeed(400);
 		       motorB.setSpeed(200);
-		       Delay.msDelay(4000);
+		       Delay.msDelay(2000);
 		       
 		       
 		       motorA.setSpeed(500);
 		       motorB.setSpeed(500);
-		       while(!ColorSensor.colorName(color.getColorID()).equals("White"))
-			    {
-					motorA.forward();
-				    motorB.forward();
-				    //print color to screen
-					Lcd.clear(6);
-				    Lcd.print(6, "%s", ColorSensor.colorName(color.getColorID()));
-			    }
-				Lcd.clear(6);
-			    Lcd.print(6, "%s", ColorSensor.colorName(color.getColorID()));
-			    
-				motorA.stop(true);
-		        motorB.stop(true);
+		       Delay.msDelay(5000);
 		        
 		motorA.stop();
 		motorB.stop();
