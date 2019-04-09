@@ -52,13 +52,8 @@ public class assigment2 {
 		//if touch something then stop
 		while(touch.isTouched())
 		{
-		motorA.forward();
-	    motorB.forward();
-		   
-		    
-		}
 		
-		 motorA.stop(true);
+		    motorA.stop(true);
 			motorB.stop(true);
 			//go back 
 			motorA.backward();
@@ -86,6 +81,11 @@ public class assigment2 {
 			Delay.msDelay(1000);
 			//turn left
 			rotate(90);
+		    
+		}
+		motorA.forward();
+	    motorB.forward();
+		
 		
 		float range = uss.getRange();
 		
