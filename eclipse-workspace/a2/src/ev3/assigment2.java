@@ -6,7 +6,7 @@
 *	Student Name: Jianyu He   *
 *	Student No: D17124591	  *
 *******************************/
-`
+
 package ev3;
 
 import lejos.hardware.motor.*;
@@ -50,40 +50,42 @@ public class assigment2 {
         motorA.setSpeed(500);
 		motorB.setSpeed(500);
 		//if touch something then stop
-		while(!touch.isTouched())
+		while(touch.isTouched())
 		{
-			motorA.forward();
-		    motorB.forward();
+		
+		    motorA.stop(true);
+			motorB.stop(true);
+			//go back 
+			motorA.backward();
+		    motorB.backward();
+			motorA.setSpeed(100);
+			motorB.setSpeed(100);
+			
+			Delay.msDelay(1000);
+					//turn left
+			rotate(90);
+			
+			motorA.setSpeed(400);
+			motorB.setSpeed(400);
+			Delay.msDelay(1000);
+			//turn right
+			rotate(-90);
+			
+			motorA.setSpeed(400);
+			motorB.setSpeed(400);
+			Delay.msDelay(2200);
+			//turn right
+			rotate(-90);
+			motorA.setSpeed(400);
+			motorB.setSpeed(400);
+			Delay.msDelay(1000);
+			//turn left
+			rotate(90);
 		    
 		}
-		motorA.stop(true);
-		motorB.stop(true);
-		//go back 
-		motorA.backward();
-	    motorB.backward();
-		motorA.setSpeed(100);
-		motorB.setSpeed(100);
+		motorA.forward();
+	    motorB.forward();
 		
-		Delay.msDelay(1000);
-				//turn left
-		rotate(90);
-		
-		motorA.setSpeed(400);
-		motorB.setSpeed(400);
-		Delay.msDelay(1000);
-		//turn right
-		rotate(-90);
-		
-		motorA.setSpeed(400);
-		motorB.setSpeed(400);
-		Delay.msDelay(2200);
-		//turn right
-		rotate(-90);
-		motorA.setSpeed(400);
-		motorB.setSpeed(400);
-		Delay.msDelay(1000);
-		//turn left
-		rotate(90);
 		
 		float range = uss.getRange();
 		
@@ -130,7 +132,7 @@ public class assigment2 {
 			    motorB.backward();
 			    motorA.setSpeed(500);
 			       motorB.setSpeed(500);
-			       Delay.msDelay(2000); 
+			       Delay.msDelay(1000); 
 			       //rotate then go back
 		        motorA.forward();
 			    motorB.forward();
